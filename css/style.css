@@ -1,0 +1,85 @@
+head #tab-icon { border-radius: 50%; }
+
+body {
+	font-family: -apple-system, system-ui, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "游ゴシック Medium", meiryo, sans-serif; margin: 0; }
+
+header { width: 100%; height: auto; display: flex; justify-content: center; }
+#headernav { 
+	width: 100%; height: auto; padding: 30px 0 60px 0;
+	display: flex; flex-flow: row nowrap; align-items: center; justify-content: flex-end; }
+.headernav-icon { justify-self: flex-start; margin: 0 auto 0 0; }
+.headernav-icon a { text-decoration: none; }
+.headernav-icon a img { width: 60px; height: 60px; }
+.headernav-link { margin: 0 10px 21px 10px; }
+.headernav-link:nth-child(2) { margin-left: 0; }
+.headernav-link:last-child { margin-right: 10px; }
+.headernav-link a { text-decoration: none; }
+.headernav-link a p { 
+	font-size: 16px; color: #2c3e50; margin: 0;
+	display: flex; flex-flow: column; align-items: center; position: relative; }
+.headernav-link:nth-child(2) a p:after {
+	content: ""; width: 100%; height: 2px; background: #40A9EF;
+	position: absolute; top: 18px; }
+.headernav-link a p:hover:after {
+	content: ""; width: 100%; height: 2px; background: #40A9EF;
+	position: absolute; top: 18px; }
+
+main { display: flex; flex-flow: column nowrap; align-items: center; }
+#container { 
+	width: 97%; height: auto; padding: 0 1.5% 0 1.5%;
+	display: flex; flex-flow: column nowrap; align-items: flex-start; }
+.container-summary {
+	width: 100%; height: auto; 
+	padding: 40px 0 40px 0; border-bottom: solid 1px #dddddd;
+	display: flex; flex-flow: column nowrap; align-items: flex-start; }
+.container-summary:last-child { border-bottom: none; }
+.container-caption {  margin-bottom: 30px; }
+.container-caption a { text-decoration: none; }
+.container-caption a p {
+	font-weight: 700; font-size: 23px; line-height: 23px; color: #2c3e50; margin: 0;
+	display: flex; flex-flow: column; align-items: flex-start; position: relative; }
+.container-caption a p:hover:after {
+	content: ""; width: 100%; height: 2px; background: #40A9EF;
+	position: absolute; top: 25px; }
+.container-category { margin-bottom: 10px; }
+.container-category a { text-decoration: none; }
+.container-category a p {
+	font-weight: 400; font-size: 15px; line-height: 15px; color: #2c3e50; margin: 0; }
+.container-date { }
+.container-date a { text-decoration: none; }
+.container-date a p {
+	font-weight: 400; font-size: 15px; line-height: 15px; color: #7f8c8d; margin: 0; }
+#next-button { 
+	align-self: center; width: 50px; height: 30px; margin: 60px 0 60px 0;
+	background: #0F7AC4; border-radius: 4px;
+	transition-duration: 0.1s; transition-property: background; }
+#next-button:hover { background: #40A9EF; }
+#next-button a {
+	width: 50px; height: 30px; text-decoration: none;
+	display: flex; justify-content: center; align-items: center; }
+#next-button a p { margin: 0; font-size: 14px; line-height: 14px; color: white; }
+
+footer { display: flex; justify-content: center; }
+#copyright { 
+	width: 97%; height: auto; border-top: solid 1px #dddddd; padding: 20px 1.5% 65px 1.5%;
+	display: flex; flex-flow: row nowrap; justify-content: center; }
+#copyright p {
+	margin: 0 5px 0 0; font-weight:100; font-size:14px; line-height:14px; color:#aaaaaa; }
+#copyright a { 
+	margin: 0; font-weight: 100; font-size: 14px; line-height: 14px; color: #aaaaaa; 
+	text-decoration: none; transition-duration: 0.1s; transition-property: color; }
+#copyright a:hover { color: #888888; }
+
+@media screen and ( min-width: 701px ) {
+	#headernav { width: 700px; height: auto; }
+	#container { width: 680px; height: auto; }
+	#copyright { width: 680px; height: auto; }
+}
+
+@media screen and ( max-width: 700px ) {
+	#headernav { flex-flow: row wrap; padding-bottom: 10px; }
+	.headernav-icon { width: 100%; height: auto; margin-bottom: 25px; }
+	.headernav-link { justify-content: center; }
+	.headernav-link:nth-child(2) { margin-left: auto; }
+	.headernav-link:last-child { margin-right: auto; }
+}
